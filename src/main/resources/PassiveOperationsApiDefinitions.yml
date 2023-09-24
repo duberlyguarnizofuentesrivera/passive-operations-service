@@ -1,0 +1,90 @@
+# Created By Duberly Guarnizo <duberlygfr@gmail.com>
+openapi: "3.0.0"
+info:
+  version: "1.0.0"
+  title: "Passive Operations"
+  description: "This API has endpoints to create account deposits or withdrawals"
+  contact:
+    name: Duberly Guarnizo
+    email: 'duberlygfr@gmail.com'
+    url: 'https://duberlyguarnizo.com'
+servers:
+  - url: 'http://localhost:8080'
+paths:
+  /passive/deposits/{accountId}:
+    parameters:
+      - name: accountId
+        in: path
+        required: true
+        description: The account UUID to make the deposit on.
+        schema:
+          type: string
+          format: uuid
+    post:
+      summary: "Create a deposit into an account"
+      operationId: depositIntoAccount
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DepositDto'
+      responses:
+        200:
+          description: "Deposit completed."
+
+  /passive/withdrawals/{accountId}:
+    parameters:
+      - name: accountId
+        in: path
+        required: true
+        description: The account UUID where the money will be taken from.
+        schema:
+          type: string
+          format: uuid
+    post:
+      summary: "Withdraw an amount from an account"
+      operationId: withdrawFromAccount
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WithdrawalDto'
+      responses:
+        200:
+          description: "Withdraw completed."
+
+components:
+  schemas:
+    DepositDto:
+      required:
+        - amount
+        - destinationAccount
+        - transactionMedia
+      properties:
+        amount:
+          type: number
+          format: double
+        destinationAccount:
+          type: string
+          format: uuid
+        transactionMedia:
+          enum:
+            - atm
+            - app
+            - web
+            - branch
+
+    WithdrawalDto:
+      required:
+        - amount
+        - transactionMedia
+      properties:
+        amount:
+          type: number
+          format: double
+        transactionMedia:
+          enum:
+            - atm
+            - app
+            - web
+            - branch
