@@ -2,11 +2,12 @@
  * Copyright (c) 2023. Code by Duberly Guarnizo <duberlygfr@gmail.com>.
  */
 
-package com.duberlyguarnizo.passiveoperationsservice.infrastructure;
+package com.duberlyguarnizo.passiveoperationsservice.infrastructure.port;
 
 import com.duberlyguarnizo.passiveoperationsservice.domain.exceptions.OperationPersistenceException;
 import com.duberlyguarnizo.passiveoperationsservice.domain.model.Deposit;
 import com.duberlyguarnizo.passiveoperationsservice.domain.repository.DepositPersistence;
+import com.duberlyguarnizo.passiveoperationsservice.infrastructure.mapper.DepositMapper;
 import com.duberlyguarnizo.passiveoperationsservice.infrastructure.persistence.DepositEntityRepository;
 import org.springframework.stereotype.Repository;
 

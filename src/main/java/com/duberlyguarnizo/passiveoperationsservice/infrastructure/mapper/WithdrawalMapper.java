@@ -2,9 +2,10 @@
  * Copyright (c) 2023. Code by Duberly Guarnizo <duberlygfr@gmail.com>.
  */
 
-package com.duberlyguarnizo.passiveoperationsservice.infrastructure.persistence;
+package com.duberlyguarnizo.passiveoperationsservice.infrastructure.mapper;
 
 import com.duberlyguarnizo.passiveoperationsservice.domain.model.Withdrawal;
+import com.duberlyguarnizo.passiveoperationsservice.infrastructure.persistence.WithdrawalEntity;
 import java.time.Instant;
 
 public final class WithdrawalMapper {
