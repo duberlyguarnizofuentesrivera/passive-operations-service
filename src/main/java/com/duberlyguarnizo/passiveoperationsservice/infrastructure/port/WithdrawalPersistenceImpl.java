@@ -11,6 +11,10 @@ import com.duberlyguarnizo.passiveoperationsservice.infrastructure.mapper.Withdr
 import com.duberlyguarnizo.passiveoperationsservice.infrastructure.persistence.WithdrawalEntityRepository;
 import org.springframework.stereotype.Repository;
 
+/**
+ * WithdrawalPersistenceImpl is a class that implements the WithdrawalPersistence interface.
+ * It provides methods for creating withdrawal records.
+ */
 @Repository
 public class WithdrawalPersistenceImpl implements WithdrawalPersistence {
   private final WithdrawalEntityRepository repository;

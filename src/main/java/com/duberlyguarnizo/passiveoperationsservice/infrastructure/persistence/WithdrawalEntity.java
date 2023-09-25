@@ -13,6 +13,10 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * WithdrawalEntity represents a withdrawal transaction in the system.
+ * It is used to store information related to the withdrawal operation.
+ */
 @Getter
 @Setter
 @Builder

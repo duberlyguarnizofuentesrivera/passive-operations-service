@@ -10,8 +10,11 @@ info:
     url: 'https://duberlyguarnizo.com'
 servers:
   - url: 'http://localhost:8080'
+
+
+
 paths:
-  /passive/deposits/{accountId}:
+  /passives/deposits/{accountId}:
     parameters:
       - name: accountId
         in: path
@@ -32,7 +35,7 @@ paths:
         200:
           description: "Deposit completed."
 
-  /passive/withdrawals/{accountId}:
+  /passives/withdrawals/{accountId}:
     parameters:
       - name: accountId
         in: path

@@ -4,6 +4,10 @@
 
 package com.duberlyguarnizo.passiveoperationsservice.domain.exceptions;
 
+/**
+ * Exception thrown when an error occurs during persistence operations related to
+ * an infrastructure service or entity.
+ */
 public class OperationPersistenceException extends RuntimeException {
   public OperationPersistenceException(String message) {
     super(message);

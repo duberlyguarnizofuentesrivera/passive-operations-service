@@ -4,6 +4,9 @@
 
 package com.duberlyguarnizo.passiveoperationsservice.domain.enums;
 
+/**
+ * Represents the channels through which an operation can be performed.
+ */
 public enum OperationChannel {
   ATM,
   WEB,

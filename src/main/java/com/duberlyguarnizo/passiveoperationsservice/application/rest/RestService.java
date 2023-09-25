@@ -14,6 +14,9 @@ import com.duberlyguarnizo.passiveoperationsservice.domain.service.WithdrawalSer
 import java.util.UUID;
 import org.springframework.stereotype.Service;
 
+/**
+ * This class is responsible for handling deposit and withdrawal operations through REST APIs.
+ */
 @Service
 public class RestService {
   private final DepositService depositService;
@@ -24,6 +27,13 @@ public class RestService {
     this.withdrawalService = withdrawalService;
   }
 
+  /**
+   * Performs a deposit operation.
+   *
+   * @param dto           The deposit data transfer object containing the necessary
+   *                      information for the deposit operation.
+   * @param originAccount The UUID of the origin account from where the funds will be deposited.
+   */
   public void doDeposit(DepositDto dto, UUID originAccount) {
     Deposit deposit = Deposit.builder()
             .originAccountId(originAccount)
@@ -34,6 +44,13 @@ public class RestService {
     depositService.depositMoney(deposit);
   }
 
+  /**
+   * Performs a withdrawal operation.
+   *
+   * @param dto           The withdrawal data transfer object containing the necessary
+   *                     information for the withdrawal operation.
+   * @param originAccount The UUID of the origin account from where the funds will be withdrawn.
+   */
   public void doWithdrawal(WithdrawalDto dto, UUID originAccount) {
     Withdrawal withdrawal = Withdrawal.builder()
             .originAccountId(originAccount)

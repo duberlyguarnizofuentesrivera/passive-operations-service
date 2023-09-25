@@ -13,13 +13,17 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * Represents a deposit entity in the system.
+ * The class is persisted in the "deposits" collection in a document-oriented database.
+ */
 @Getter
 @Setter
 @Builder
 @Document("deposits")
 public class DepositEntity {
   @Id
-  String id;
+  private String id;
   private UUID originAccountId;
   private UUID destinationAccountId;
   private Double amount;

@@ -8,6 +8,9 @@ import com.duberlyguarnizo.passiveoperationsservice.domain.exceptions.OperationP
 import com.duberlyguarnizo.passiveoperationsservice.domain.model.Withdrawal;
 
 
+/**
+ * Interface for the persistence layer to create withdrawal operations.
+ */
 public interface WithdrawalPersistence {
   void createWithdrawal(Withdrawal withdrawal) throws OperationPersistenceException;
 }
