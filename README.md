@@ -1,5 +1,8 @@
+[![Quality gate](https://duberlyguarnizo.com/sonarqube/api/project_badges/quality_gate?project=Bootcamp-Passive-Operations-Service&token=sqb_2809361b37b77479448f881f70958e59c01ab145)](https://duberlyguarnizo.com/sonarqube/dashboard?id=Bootcamp-Passive-Operations-Service)
 # Passive Operations
 
+[![Coverage](https://duberlyguarnizo.com/sonarqube/api/project_badges/measure?project=Bootcamp-Passive-Operations-Service&metric=coverage&token=sqb_2809361b37b77479448f881f70958e59c01ab145)](https://duberlyguarnizo.com/sonarqube/dashboard?id=Bootcamp-Passive-Operations-Service)
+[![Bugs](https://duberlyguarnizo.com/sonarqube/api/project_badges/measure?project=Bootcamp-Passive-Operations-Service&metric=bugs&token=sqb_2809361b37b77479448f881f70958e59c01ab145)](https://duberlyguarnizo.com/sonarqube/dashboard?id=Bootcamp-Passive-Operations-Service)
 ## Microservice for NttData's Bootcamp
 
 This service has only two functions: to create a deposit, and to create a withdrawal.

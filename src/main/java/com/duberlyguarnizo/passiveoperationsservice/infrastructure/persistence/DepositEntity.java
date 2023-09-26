@@ -10,6 +10,7 @@ import java.util.UUID;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -20,13 +21,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 @Builder
+@ToString
 @Document("deposits")
 public class DepositEntity {
   @Id
+  @ToString.Exclude
   private String id;
   private UUID originAccountId;
   private UUID destinationAccountId;
   private Double amount;
   private OperationChannel operationChannel;
+  @ToString.Exclude
   private Instant createdAt;
 }

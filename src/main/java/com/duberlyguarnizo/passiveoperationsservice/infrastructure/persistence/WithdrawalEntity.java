@@ -10,6 +10,7 @@ import java.util.UUID;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -20,12 +21,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 @Builder
+@ToString
 @Document("withdrawals")
 public class WithdrawalEntity {
   @Id
+  @ToString.Exclude
   String id;
   private UUID originAccountId;
   private Double amount;
   private OperationChannel operationChannel;
+  @ToString.Exclude
   private Instant createdAt;
 }

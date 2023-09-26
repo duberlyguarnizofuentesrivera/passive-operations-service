@@ -10,6 +10,7 @@ import java.util.UUID;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * Represents a withdrawal transaction.
@@ -17,6 +18,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
+@ToString
 @DomainModel
 public class Withdrawal {
   private UUID originAccountId;
