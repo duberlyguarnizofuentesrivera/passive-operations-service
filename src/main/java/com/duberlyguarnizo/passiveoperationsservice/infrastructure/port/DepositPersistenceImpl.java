@@ -4,6 +4,7 @@
 
 package com.duberlyguarnizo.passiveoperationsservice.infrastructure.port;
 
+import com.duberlyguarnizo.passiveoperationsservice.architecture.Port;
 import com.duberlyguarnizo.passiveoperationsservice.domain.exceptions.OperationPersistenceException;
 import com.duberlyguarnizo.passiveoperationsservice.domain.model.Deposit;
 import com.duberlyguarnizo.passiveoperationsservice.domain.repository.DepositPersistence;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Repository;
  * This class is responsible for persisting deposit data to the database.
  */
 @Repository
+@Port
 public class DepositPersistenceImpl implements DepositPersistence {
   private final DepositEntityRepository repository;
 

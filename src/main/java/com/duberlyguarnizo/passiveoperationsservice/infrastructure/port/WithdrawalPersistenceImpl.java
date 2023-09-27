@@ -4,6 +4,7 @@
 
 package com.duberlyguarnizo.passiveoperationsservice.infrastructure.port;
 
+import com.duberlyguarnizo.passiveoperationsservice.architecture.Port;
 import com.duberlyguarnizo.passiveoperationsservice.domain.exceptions.OperationPersistenceException;
 import com.duberlyguarnizo.passiveoperationsservice.domain.model.Withdrawal;
 import com.duberlyguarnizo.passiveoperationsservice.domain.repository.WithdrawalPersistence;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Repository;
  * It provides methods for creating withdrawal records.
  */
 @Repository
+@Port
 public class WithdrawalPersistenceImpl implements WithdrawalPersistence {
   private final WithdrawalEntityRepository repository;
 
