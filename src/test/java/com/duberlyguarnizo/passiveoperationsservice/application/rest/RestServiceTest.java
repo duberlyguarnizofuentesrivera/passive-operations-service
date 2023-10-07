@@ -56,7 +56,7 @@ class RestServiceTest {
   void doDeposit() {
     restService.doDeposit(depositDto, accountId);
 
-    verify(depositService).depositMoney(depositArgumentCaptor.capture());
+    verify(depositService).transferMoney(depositArgumentCaptor.capture());
     assertEquals(accountId, depositArgumentCaptor.getValue().getDestinationAccountId());
     assertEquals(1000.0, depositArgumentCaptor.getValue().getAmount());
     assertEquals(OperationChannel.WEB, depositArgumentCaptor.getValue().getOperationChannel());

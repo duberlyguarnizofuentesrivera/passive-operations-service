@@ -41,7 +41,7 @@ public class RestService {
             .amount(dto.getAmount())
             .operationChannel(OperationChannel.valueOf(dto.getTransactionMedia().name()))
             .build();
-    depositService.depositMoney(deposit);
+    depositService.transferMoney(deposit);
   }
 
   /**
